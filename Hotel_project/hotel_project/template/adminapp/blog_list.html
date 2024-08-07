@@ -1,0 +1,30 @@
+{% include "adminapp/navbar.html" %}
+
+<h1>Table blog</h1>
+<table class="table table-bordered table-striped table-hover">
+
+	<tr>
+		<th>Action</th>
+		<th>Sn</th>
+		<th>Blog_Name</th>
+		<th>Blog Image</th>
+		<th>Trip Name</th>
+		<th>Trip Info</th>
+		<th>Date</th>
+	</tr>
+	{% for i in blogs %}
+	<tr>
+		<td></td>
+		<td>{{forloop.counter}}</td>
+		<td>{{i.blog_name}}</td>
+		<td>
+		 <img src="/{{i.blog_image}}" width="50px">
+		</td>
+		<td>{{i.blog_city}}</td>
+		<td>{{i.blog_info}}</td>
+		<td>{{i.blog_date}}</td>
+	</tr>
+	{% endfor %}
+</table>
+
+{% include "adminapp/footer.html" %}

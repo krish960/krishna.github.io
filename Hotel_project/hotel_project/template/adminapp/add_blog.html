@@ -1,0 +1,36 @@
+{% include "adminapp/navbar.html" %}
+<h1>krushna</h1>
+<div class="container" style="padding-left: 20px !important;padding-right: 10px !important;">
+	<form action="/admin/save_blog/" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	<div class="row">
+		<div class="col-md-12 md-3">
+			<h3>Add Blog Bar</h3>
+		</div>
+		<div class="col-md-4 p-2 md-3 md-3">
+			Add Blog Bar Name
+			<input type="text" class="form-control" name="blog_name">
+		</div>
+		<div class="col-md-4 p-2 md-3">
+			Add Blog images
+			<input type="file" class="form-control" name="blog_image">
+		</div>
+		<div class="col-md-4 p-2 md-3">
+			Add Blog city
+			<input type="text" class="form-control" name="blog_city">
+		</div>
+		<div class="col-md-4 p-2 md-3">
+			Add Blog tirp info
+			<input type="text" class="form-control" name="blog_info">
+		</div>
+		<div class="col-md-4 p-2 md-3">
+			Blog date
+			<input type="date" class="form-control" name="blog_date">
+		</div>
+		<div class="col-md-12 md-3 text-center">
+			<button class="btn  form-control btn-primary">Save Blog</button>
+		</div>
+	</div>
+</form>
+</div>
+{% include "adminapp/footer.html" %}

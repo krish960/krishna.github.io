@@ -1,0 +1,46 @@
+{% include "adminapp/navbar.html" %}
+
+<div class="container" style="padding-left: 20px !important;padding-right: 10px !important; ">
+	<form action="/admin/save_about_us_new/" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<div class="row">
+			<div class="col-md-12 mb-3">
+				<h3>Add Services</h3>
+			</div>
+			<div class="col-md-4 mb-3">
+				Add Heading
+				<input type="text" name="about_heading"class="form-control" value="{{saved_data.about_heading}}">
+			</div>
+			<div class="col-md-4 mb-3">
+				Point 1
+				<input type="text" name="about_point1"class="form-control"value="{{saved_data.about_point1}}">
+			</div>
+			<div class="col-md-4 mb-3">
+				Point 2
+				<input type="text" name="about_point2"class="form-control" value="{{saved_data.about_point2}}" >
+			</div>
+			<div class="col-md-4 mb-3">
+				Point 3
+				<input type="text" name="about_point3"value="{{saved_data.about_point3}}" class="form-control" >
+			</div>
+			<div class="col-md-4 mb-3">
+				Point 4
+				<input type="text" name="about_point4"class="form-control" value="{{saved_data.about_point4}}">
+			</div>
+			<div class="col-md-4 mb-3">
+				Point 5
+				<input type="text" name="about_point5"class="form-control" value="{{saved_data.about_point5}}">
+			</div>
+			<div class="col-md-12 mb-3">
+				About Content
+				<textarea name="about_content"class="form-control"> {{saved_data.about_content}}</textarea>
+			</div>
+			<div class="col-md-12 mb-3 text-center">
+				<button class="btn btn-primary">Save About Us</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+{% include "adminapp/footer.html" %}
+

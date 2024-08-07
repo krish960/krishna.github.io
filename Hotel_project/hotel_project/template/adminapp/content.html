@@ -1,0 +1,40 @@
+{% include "adminapp/navbar.html" %}
+
+<div class="container p3">
+	
+	<div class="row">
+		<div class="col-md-12">
+			<div>
+				<h3>Contact User</h3>
+				<table class="table table-bordered table-striped table-hover">
+					<tr>
+						<th>Acton</th>
+						<th>Sn</th>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Message</th>
+					</tr>
+					{% for i in contact %}
+					<tr>
+						<td>
+							<i class="fa fa-trash"></i>
+							<i class="fa fa-edit"></i>
+						</td>
+						<td>{{forloop.counter}}</td>
+						<td>{{i.contact_name}}</td>
+						<td>{{i.contact_email}}</td>
+						<td>{{i.contact_message}}</td>
+					</tr>
+						{% endfor %}
+
+				</table>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+	
+
+
+{% include "adminapp/footer.html" %}

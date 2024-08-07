@@ -1,0 +1,51 @@
+{% include "adminapp/navbar.html" %}
+
+<div class="container p3">
+	
+	<div class="row">
+		<div class="col-md-12">
+			<div>
+				<h3>Enquiry</h3>
+				<table class="table table-bordered table-striped table-hover">
+					<tr>
+						<th>Acton</th>
+						<th>Sn</th>
+						<th>User-Name</th>
+						<th>Mobile No</th>
+						<th>Check in</th>
+						<th>Check out</th>
+						<th>Guests</th>
+						<th>Room Name</th>
+					</tr>
+						{% for i in enquiry %}
+					<tr>
+							<td>
+								<!-- <a href="/admin/edit_slidet?id={{i.id}}">
+										<i class="fa fa-edit"></i>
+									</a>  -->
+								<a href="/admin/delet_bookin_detles?id={{i.id}}">
+								<i class="fa fa-trash"></i></a>
+							</td>
+							<td>{{forloop.counter}}</td>
+							<td>{{i.user_name}}</td>
+							<td>{{i.mobile_number}}</td>
+							<td>{{i.check_in_date}}</td>
+							<td>{{i.check_out_date}}</td>
+							<td>{{i.guests}}</td>
+							<td>{{i.room}}</td>
+					</tr>
+						{% endfor %}
+				</table>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+	
+
+
+{% include "adminapp/footer.html" %}
+
+
+

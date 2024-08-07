@@ -1,0 +1,37 @@
+{% include "adminapp/navbar.html" %}
+
+<h1>Room List</h1>
+<table class="table table-bordered table-striped table-hover" >
+	<tr>
+		<th>Action</th>
+		<th>Sn</th>
+		<th>Name</th>
+		<th>Image</th>
+		<th>Room Price Per Day</th>
+		<th>Size</th>
+		<th>Capacity</th>
+		<th>Features</th>
+		<th>Details</th>
+	</tr>
+	{% for i in rooms %}
+	<tr>
+		<td></td>
+		<td>{{forloop.counter}}</td>
+		<td>{{i.room_name}}</td>
+		<td>
+		 <img src="/{{i.room_image}}" width="50px">
+		</td>
+		<td>{{i.room_pricing_per_day}}</td>
+		<td>{{i.room_size}}</td>
+		<td>{{i.room_capacity}}</td>
+		<td>{{i.room_features}}</td>
+		<td>{{i.room_details}}</td>
+
+
+
+
+	</tr>
+	{% endfor %}
+	
+</table>
+{% include "adminapp/footer.html" %}

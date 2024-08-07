@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Kaiadmin - Bootstrap 5 Admin Dashboard</title>
+    <meta
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <link
+      rel="icon"
+      href="/static/admin/img/kaiadmin/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Fonts and icons -->
+    <script src="/static/admin/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+      WebFont.load({
+        google: { families: ["Public Sans:300,400,500,600,700"] },
+        custom: {
+          families: [
+            "Font Awesome 5 Solid",
+            "Font Awesome 5 Regular",
+            "Font Awesome 5 Brands",
+            "simple-line-icons",
+          ],
+          urls: ["/static/admin/css/fonts.min.css"],
+        },
+        active: function () {
+          sessionStorage.fonts = true;
+        },
+      });
+    </script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/static/admin/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/admin/css/plugins.min.css" />
+    <link rel="stylesheet" href="/static/admin/css/kaiadmin.min.css" />
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="/static/admin/css/demo.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <div class="sidebar" data-background-color="dark">
+        <div class="sidebar-logo">
+          <!-- Logo Header -->
+          <div class="logo-header" data-background-color="dark">
+            <a href="index.html" class="logo">
+              <img
+                src="/static/admin/img/kaiadmin/logo_light.svg"
+                alt="navbar brand"
+                class="navbar-brand"
+                height="20"
+              />
+            </a>
+            <div class="nav-toggle">
+              <button class="btn btn-toggle toggle-sidebar">
+                <i class="gg-menu-right"></i>
+              </button>
+              <button class="btn btn-toggle sidenav-toggler">
+                <i class="gg-menu-left"></i>
+              </button>
+            </div>
+            <button class="topbar-toggler more">
+              <i class="gg-more-vertical-alt"></i>
+            </button>
+          </div>
+          <!-- End Logo Header -->
+        </div>
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+          <div class="sidebar-content">
+            <ul class="nav nav-secondary">
+              <li class="nav-item active">
+                <a data-bs-toggle="collapse" href="#dashboard"class="collapsed"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-home"></i>
+                  <p>User Info</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="dashboard">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href=/admin>
+                        <span class="sub-item">Booking Informations</span>
+                      </a>
+                      <li>
+                      <a href=/admin/content/>
+                        <span class="sub-item">Contact Message</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>  
+
+               <li class="nav-item active">
+                <a data-bs-toggle="collapse" href="#slider"class="collapsed"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-home"></i>
+                  <p>Slider</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="slider">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href=/admin/slider>
+                        <span class="sub-item">Slider Image</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href=/admin/slider_text/>
+                        <span class="sub-item">Slider Image Text</span>
+                      </a>
+                    </li>
+
+                  </ul>
+                </div>
+              </li>  
+
+               <li class="nav-item active">
+                <a data-bs-toggle="collapse" href="#about"class="collapsed"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-home"></i>
+                  <p>About</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="about">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href=/admin/home_about/>
+                        <span class="sub-item">About Home</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href=/admin/home_about_text/>
+                        <span class="sub-item">About Text</span>
+                      </a>
+                    </li>
+                      
+                  </ul>
+                </div>
+              </li>  
+
+               <li class="nav-item active">
+                <a data-bs-toggle="collapse" href="#room"class="collapsed"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-home"></i>
+                  <p>Room</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="room">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href=/admin/add_room/>
+                        <span class="sub-item">Add Room / Hall</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href=/admin/room_list/>
+                        <span class="sub-item">Romm List</span>
+                      </a>
+                    </li>
+                      
+                  </ul>
+                </div>
+              </li> 
+               <li class="nav-item active">
+                <a data-bs-toggle="collapse" href="#testimonials"class="collapsed"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-home"></i>
+                  <p>Testimonials</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="testimonials">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href=/admin/testimonials/>
+                        <span class="sub-item">Add Testimonials</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href=/admin/testimonials_list/>
+                        <span class="sub-item">Testimonials List</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>  
+              <li class="nav-item active">
+                <a data-bs-toggle="collapse" href="#blog"class="collapsed"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-home"></i>
+                  <p>Blog</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="blog">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href=/admin/add_blog/>
+                        <span class="sub-item">Add blog</span>
+                      </a>
+                    </li>
+                     <li>
+                      <a href=/admin/blog_list/>
+                        <span class="sub-item">Blog List</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>  
+               <li class="nav-item active">
+                <a data-bs-toggle="collapse" href="#services"class="collapsed"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-home"></i>
+                  <p>Services</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="services">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href=/admin/Add_services/>
+                        <span class="sub-item">Add Services</span>
+                      </a>
+                    </li>
+                     <li>
+                      <a href=/admin/services_list/>
+                        <span class="sub-item">Services List</span>
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </li> 
+              <li class="nav-item active">
+                <a data-bs-toggle="collapse" href="#about_us"class="collapsed"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-home"></i>
+                  <p>About us</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="about_us">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href=/admin/Add_about/>
+                        <span class="sub-item">About_us</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href=/admin/add_about_us_images/>
+                        <span class="sub-item">About_us_images</span>
+                      </a>
+                    </li>
+                     <li>
+                      <a href=/admin/add_about_discover_service/>
+                        <span class="sub-item">About_Discover_Service</span>
+                      </a>
+                    </li>
+                     <li>
+                      <a href=/admin/add_gallery/>
+                        <span class="sub-item">About_GALLERY</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>  
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Sidebar -->
+
+      <div class="main-panel">
+        <div class="main-header">
+          <div class="main-header-logo">
+            <!-- Logo Header -->
+            <div class="logo-header" data-background-color="dark">
+              <a href="index.html" class="logo">
+                <img
+                  src="/static/admin/img/kaiadmin/logo_light.svg"
+                  alt="navbar brand"
+                  class="navbar-brand"
+                  height="20"
+                />
+              </a>
+              <div class="nav-toggle">
+                <button class="btn btn-toggle toggle-sidebar">
+                  <i class="gg-menu-right"></i>
+                </button>
+                <button class="btn btn-toggle sidenav-toggler">
+                  <i class="gg-menu-left"></i>
+                </button>
+              </div>
+              <button class="topbar-toggler more">
+                <i class="gg-more-vertical-alt"></i>
+              </button>
+            </div>
+            <!-- End Logo Header -->
+          </div>
+          <!-- Navbar Header -->
+          <nav
+            class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom"
+          >
+            <div class="container-fluid">
+              <nav
+                class="navbar navbar-header-left navbar-expand-lg navbar-form nav-search p-0 d-none d-lg-flex"
+              >
+               
+              </nav>
+
+              <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+                <li
+                  class="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none"
+                >
+                 
+                  <ul class="dropdown-menu dropdown-search animated fadeIn">
+                  </ul>
+                </li>
+                <li class="nav-item topbar-icon dropdown hidden-caret">
+                  <div class="dropdown-menu quick-actions animated fadeIn">
+                    <div class="quick-actions-header">
+                      <span class="title mb-1">Quick Actions</span>
+                      <span class="subtitle op-7">Shortcuts</span>
+                    </div>
+                    <div class="quick-actions-scroll scrollbar-outer">
+                      <div class="quick-actions-items">
+                        <div class="row m-0">
+                          <a class="col-6 col-md-4 p-0" href="#">
+                            <div class="quick-actions-item">
+                              <div class="avatar-item bg-danger rounded-circle">
+                                <i class="far fa-calendar-alt"></i>
+                              </div>
+                              <span class="text">Calendar</span>
+                            </div>
+                          </a>
+                          <a class="col-6 col-md-4 p-0" href="#">
+                            <div class="quick-actions-item">
+                              <div
+                                class="avatar-item bg-warning rounded-circle"
+                              >
+                                <i class="fas fa-map"></i>
+                              </div>
+                              <span class="text">Maps</span>
+                            </div>
+                          </a>
+                          <a class="col-6 col-md-4 p-0" href="#">
+                            <div class="quick-actions-item">
+                              <div class="avatar-item bg-info rounded-circle">
+                                <i class="fas fa-file-excel"></i>
+                              </div>
+                              <span class="text">Reports</span>
+                            </div>
+                          </a>
+                          <a class="col-6 col-md-4 p-0" href="#">
+                            <div class="quick-actions-item">
+                              <div
+                                class="avatar-item bg-success rounded-circle"
+                              >
+                                <i class="fas fa-envelope"></i>
+                              </div>
+                              <span class="text">Emails</span>
+                            </div>
+                          </a>
+                          <a class="col-6 col-md-4 p-0" href="#">
+                            <div class="quick-actions-item">
+                              <div
+                                class="avatar-item bg-primary rounded-circle"
+                              >
+                                <i class="fas fa-file-invoice-dollar"></i>
+                              </div>
+                              <span class="text">Invoice</span>
+                            </div>
+                          </a>
+                          <a class="col-6 col-md-4 p-0" href="#">
+                            <div class="quick-actions-item">
+                              <div
+                                class="avatar-item bg-secondary rounded-circle"
+                              >
+                                <i class="fas fa-credit-card"></i>
+                              </div>
+                              <span class="text">Payments</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="nav-item topbar-user dropdown hidden-caret">
+                  <a
+                    class="dropdown-toggle profile-pic"
+                    data-bs-toggle="dropdown"
+                    href="#"
+                    aria-expanded="false"
+                  >
+                    <div class="avatar-sm">
+                      <img
+                        src="/static/admin/img/profile.jpg"
+                        alt="..."
+                        class="avatar-img rounded-circle"
+                      />
+                    </div>
+                    <span class="profile-username">
+                      <span class="op-7">Hi,</span>
+                      <span class="fw-bold">Krushna</span>
+                    </span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-user animated fadeIn">
+                    <div class="dropdown-user-scroll scrollbar-outer">
+                      <li>
+                        <div class="user-box">
+                          <div class="avatar-lg">
+                            <img
+                              src="/static/admin/img/profile.jpg"
+                              alt="image profile"
+                              class="avatar-img rounded"
+                            />
+                          </div>
+                          <div class="u-text">
+                            <h4>Krushna</h4>
+                            <p class="text-muted">thombarek362@gmail.com</p>
+                            <a
+                              href="/admin/profile"
+                              class="btn btn-xs btn-secondary btn-sm"
+                              >View Profile</a
+                            >
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">My Profile</a>
+                        <a class="dropdown-item" href="#">Logout</a>
+                      </li>
+                    </div>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- End Navbar -->
+        </div>
+        <!-- <br>
+        <br>
+        <br> -->

@@ -1,0 +1,26 @@
+{% include "adminapp/navbar.html" %}
+<br>
+<h1>Room List</h1>
+<table class="table table-bordered table-striped table-hover" >
+	<tr>
+		<th>Action</th>
+		<th>Sn</th>
+		<th>Image</th>
+		<th>Name</th>
+		<th>Details</th>
+	</tr>
+	{% for i in servicess %}
+	<tr>
+		<td></td>
+		<td>{{forloop.counter}}</td>
+		<td>
+		 <img src="/{{i.services_image}}" width="50px">
+		</td>
+		<td>{{i.services_name}}</td>
+		<td>{{i.services_details}}</td>
+
+	</tr>
+	{% endfor %}
+	
+</table>
+{% include "adminapp/footer.html" %}

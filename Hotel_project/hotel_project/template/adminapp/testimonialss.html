@@ -1,0 +1,24 @@
+{% include "adminapp/navbar.html" %}
+<h1>Table</h1>
+<table class="table table-bordered table-striped table-hover">
+	<tr>
+		<th>Action</th>
+		<th>Sn</th>
+		<th>Testimonials Name</th>
+		<th>Start Testimnials</th>
+		<th>Testimnials Img</th>
+		<th>Testimonials Details</th>
+	</tr>
+	{% for i in testimonialss %}
+	<tr>
+		<td></td>
+		<td>{{forloop.counter}}</td>
+		<td>{{i.testimonials_name}}</td>
+		<td>{{i.start_testimnials}}</td>
+		<td>
+			<img src="/{{i.img_testimnials}}" height="50px">
+		</td>
+		<td>{{i.testimonials_details}}</td>
+	</tr>
+	{% endfor %}
+</table>

@@ -1,0 +1,37 @@
+{% include "adminapp/navbar.html" %}
+
+<div class="container" style="padding-left: 20px !important;padding-right: 10px !important; ">
+	<form action="/admin/save_discover_services/" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<div class="row">
+			<div class="col-md-12 mb-3">
+				<h3>Add Discover Services</h3>
+			</div>
+			<div class="col-md-6 mb-3">
+				Background Image
+				<input type="file" name="background_image"class="form-control" >
+				<img src="/{{discover_servicess.background_image}}" width="50px">
+			</div>
+			<div class="col-md-6 mb-3">
+				Title 
+				<input type="text" name="image_title"class="form-control"value="{{discover_servicess.image_title}}" >
+			</div>
+			<div class="col-md-6 mb-3">
+				Sub_title
+				<input type="text" name="sub_title"class="form-control" value="{{discover_servicess.sub_title}}">
+			</div>
+			<div class="col-md-6 mb-3">
+				Video Link
+				<input type="url" name="video_link"class="form-control">
+				<video controls >
+					<source src="/{{discover_servicess.video_link}}" type="mp3" >
+				</video>
+			</div>
+			<div class="col-md-12 text-center mb-3">
+				<button class="btn btn-primary">Save Discover</button>
+			</div>
+		
+		</div>
+	</form>
+</div>
+{% include "adminapp/footer.html" %}

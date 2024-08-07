@@ -1,0 +1,244 @@
+{% include "website/navbar.html" %}
+    <!-- Hero Section Begin -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hero-text">
+                        <h1>{{slider_text.slider_heading}}</h1>
+                        <p>{{slider_text.slider_content}}</p>
+                        <a href="{{slider_text.slider_button_link}}" class="primary-btn">{{slider_text.slider_button_text}}</a>
+                    </div>
+                </div>
+              <!--   <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+                    <div class="booking-form">
+                        <h3>Booking Your Hotel</h3>
+                        <form action="/save_enquiry/" method="post">
+                            {% csrf_token %}
+                             <div class="check-date">
+                                <label for="guest">Name:</label>
+                                <input type="text" name="user_name">
+                            </div>
+                             <div class="check-date">
+                                <label for="guest">Contact:</label>
+                                <input type="number" name="mobile_number">
+                            </div>
+                            <div class="check-date">
+                                <label for="date-in">Check In:</label>
+                                <input type="date" class="date-input" 
+                                name="check_in_date" id="date-in">
+                            </div>
+                            <div class="check-date">
+                                <label for="date-out">Check Out:</label>
+                                <input type="date" class="date-input"
+                                 name="check_out_date" id="date-out">
+                            </div>
+                            <div class="check-date">
+                                <label for="guest">Guests:</label>
+                                <input type="number" name="guests" class="date-inpu" value="1">
+                            </div>
+                            <div class="select-option">
+                                <label for="room">Room:</label>
+                                <select id="room" name="room">
+                                    {% for i in rooms %}
+                                    <option value="{{i.room_name}}">{{i.room_name}}</option>
+                                     {% endfor %}
+                                </select>
+                            </div>
+                            <button type="submit">Save Enquiry</button>
+                        </form>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="hero-slider owl-carousel">
+            {% for i in sliders %}
+            <div class="hs-item set-bg" data-setbg="/{{i.slider_image}}"></div>
+            {% endfor %}
+        </div>
+    </section>
+    <!-- Hero Section End -->
+    <!-- About Us Section Begin -->
+    <section class="aboutus-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-text">
+                        <div class="section-title">
+                            <span>About Us</span>
+                            <h2>{{about.about_us_heading}}</h2>
+                        </div>
+                        <p class="f-para">{{about.about_us_content}}</p>
+                        <!-- <p class="s-para">So when it comes to booking the perfect hotel, vacation rental, resort,
+                            apartment, guest house, or tree house, we’ve got you covered.</p> -->
+                        <a href="#" class="primary-btn about-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-pic">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="/{{about.about_us_image1}}" alt="">
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="/{{about.about_us_image2}}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Us Section End -->
+    <!-- Services Section End -->
+    <section class="services-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>What We Do</span>
+                        <h2>Discover Our Services</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for i in servicess %}
+                <div class="col-lg-4 col-sm-6">
+                    <div class="service-item">
+                        <i>
+                            <img src="/{{i.services_image}}" width="40px" height="40px">
+                        </i>
+                        <h4>{{i.services_name}}</h4>
+                        <p>{{i.services_details}}</p>
+                    </div>
+                </div>
+                 {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
+    <!-- Home Room Section Begin -->
+    <section class="hp-room-section">
+        <div class="container-fluid">
+            <div class="hp-room-items">
+                <div class="row">
+                         {% for i in rooms %}
+                    <div class="col-lg-3 col-md-6">
+                        <div class="hp-room-item set-bg"   data-setbg="/{{i.room_image}}">
+                            <div class="hr-text">
+                                <h3>{{i.room_name}}</h3>
+                                <h2>{{i.room_pricing_per_day}}<span>/Pernight</span></h2>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="r-o">Size:</td>
+                                            <td>{{i.room_size}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Capacity:</td>
+                                            <td>{{i.room_capacity}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Bed:</td>
+                                            <td>{{i.room_features}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="r-o">Services:</td>
+                                            <td>Wifi, Television, Bathroom,...</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="#" class="primary-btn">{{i.room_details}}</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                   {% endfor %}
+                
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Home Room Section End -->
+
+    <!-- Testimonial Section Begin -->
+    <section class="testimonial-section spad">
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Testimonials</span>
+                         {% for i in testimonialss %}
+                        <h2>{{i.testimonials_name}}</h2>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                {% for i in testimonialss %}
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="testimonial-slider owl-carousel">
+                        <div class="ts-item">
+                            <p>{{i.testimonials_details}}</p>
+                            <div class="ti-author">
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star-half_alt"></i>
+                                </div>
+                                <h5>{{i.start_testimnials}}</h5>
+                            </div>
+                            <img src="/{{i.img_testimnials}} " width="70px" height="55px" alt="">
+                        </div>
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section End -->
+
+    <!-- Blog Section Begin -->
+    <section class="blog-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Hotel News</span>
+                        {% for i in blogs %}
+                        <h2>{{i.blog_name}}</h2>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                        {% for i in blogs %}
+                <div class="col-lg-4">
+                    <div class="blog-item set-bg" data-setbg="/{{i.blog_image}}">
+                        <div class="bi-text">
+                            <span class="b-tag">{{i.blog_city}}</span>
+                            <h4><a href="#">{{i.blog_info}}</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> {{i.blog_date}}</div>
+                        </div>
+                    </div>
+                    
+                </div>
+                    {% endfor %}
+                
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+
+    <!-- Footer Section Begin -->
+    
+
+{% include  "website/footer.html" %}

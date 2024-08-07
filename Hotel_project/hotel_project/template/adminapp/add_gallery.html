@@ -1,0 +1,43 @@
+{% include "adminapp/navbar.html" %}
+<br>
+
+<div class="container" style="padding-left: 20px !important;padding-right: 10px !important;">
+	<form action="/admin/save_gallery/" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<div class="row">
+			<div class="col-md-12 mb-3">
+				<h3>Add Gallery</h3>
+			</div>
+			<div class="col-md-6 mb-3">
+				Gallery image1
+				<input type="file" name="gallery_image1" accept="image/*" class="form-control" value="{{saved_gellery.gallery_image1}}">
+				<img src="/{{saved_gellery.gallery_image1}}" width="50px">
+			</div>
+			<div class="col-md-6 mb-3">
+				Gallery image2
+				<input type="file" name="gallery_image2" accept="image/*" class="form-control" value="{{saved_gellery.gallery_image2}}">
+				<img src="/{{saved_gellery.gallery_image2}}" width="50px">
+
+			</div>
+			<div class="col-md-6 mb-3">
+				Gallery image3
+				<input type="file" name="gallery_image3" accept="image/*" class="form-control" value="{{saved_gellery.gallery_image3}}">
+				<img src="/{{saved_gellery.gallery_image3}}" width="50px">
+
+			</div>
+			<div class="col-md-6 mb-3">
+				Gallery image4
+				<input type="file" name="gallery_image4" accept="image/*" class="form-control" value="{{saved_gellery.gallery_image4}}">
+				<img src="/{{saved_gellery.gallery_image4}}" width="50px">
+
+			</div>
+			<div class="col-md-12 mb-3 text-center">
+				<button class="btn btn-primary">Save Gallery</button>
+				
+			</div>
+		</div>
+	</form>
+</div>
+
+
+{% include "adminapp/footer.html" %}
